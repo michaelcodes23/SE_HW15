@@ -1,13 +1,15 @@
 import React from 'react'
 import CardBody from './CardBody'
 import CardImage from './CardImage'
+import cardsArr from '../data'
 //create the component
-const Card1 = () => {
+const Card1 = (props) => {
+  console.log('this is props: ', props)
 return (
 
   <div className="card" style={ {width: "18rem"} }>
-  <CardImage />
-  <CardBody title = "Greece"/>
+  <CardImage img={props.img}/>
+  <CardBody title = {props.title} text = {props.text} url={props.url}/>
 </div>
   );
 };

@@ -1,19 +1,19 @@
 import React from 'react';
 import './styles.css';
 //import card1
-import Card1 from './components/Card1'
+import Card from './components/Card'
 import Card2 from './components/Card2'
 import cardsArr from './data'
 
-console.log('this is cardsArr: ', cardsArr);
-export default function App() {
+export default function App(props) {
 const cards = cardsArr.map((ele,index)=>{
   return (
-    <Card1
+    <Card
       img = {ele.img}
       title = {ele.title}
       text = {ele.text}
       url = {ele.url}
+      key={index}
       />
   )
 })
@@ -25,8 +25,9 @@ console.log('this is cards: ', cards)
     <div className="App">
       <h1>Bootstrap Cards To Component Example</h1>
     <section className="cards">
-      <Card1 />
-      <Card2 />
+      {cards}
+      {/* <Card1 title = "Greece" />
+      <Card2 /> */}
     </section>
     </div>
   )
