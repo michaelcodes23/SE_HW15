@@ -9,10 +9,7 @@ export default function App(props) {
 const cards = cardsArr.map((ele,index)=>{
   return (
     <Card
-      img = {ele.img}
-      title = {ele.title}
-      text = {ele.text}
-      url = {ele.url}
+      {...ele}
       key={index}
       />
   )

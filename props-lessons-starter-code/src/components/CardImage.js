@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CardImage = (props) => {
+const CardImage = ({img}) => {
   return (
     <img
-      src={props.img}
+      src={img}
       className="card-img-top"
       alt="..."
     />

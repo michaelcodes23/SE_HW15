@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Button = (props) => {
+const Button = ({url}) => {
   return (
-    <a href="/" className="btn btn-primary">Go somewhere</a>
+    <a href={url} className="btn btn-primary">Go somewhere</a>
   )
 }
 
